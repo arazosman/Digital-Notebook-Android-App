@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:padding="16dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/title"
+                android:hint="Başlık"
+                android:textSize="30sp"
+                android:inputType="text"
+                android:textColorHint="@android:color/white"
+                app:met_baseColor="@android:color/white"
+                app:met_primaryColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/description"
+                android:hint="Yazı"
+                android:textSize="20sp"
+                android:inputType="textMultiLine"
+                android:textColorHint="@android:color/white"
+                app:met_baseColor="@android:color/white"
+                app:met_primaryColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/date"
+                android:hint="Tarih"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="20sp"
+                android:inputType="date"
+                android:textColorHint="@android:color/white"
+                app:met_baseColor="@android:color/white"
+                app:met_primaryColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/time"
+                android:hint="Saat"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="20sp"
+                android:inputType="date"
+                android:textColorHint="@android:color/white"
+                app:met_baseColor="@android:color/white"
+                app:met_primaryColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_singleLineEllipsis="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:src="@drawable/ic_add_circle_outline_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_anchorGravity="bottom|right"
+        app:fabSize="normal">
+    </android.support.design.widget.FloatingActionButton>
+
+</android.support.design.widget.CoordinatorLayout>
